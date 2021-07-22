@@ -1,0 +1,8 @@
+---
+hosts: isilon
+
+tasks:
+  - name: Check status
+    command: isi status
+  debug:
+    msg="{{ command_results.stdout_lines }}"
